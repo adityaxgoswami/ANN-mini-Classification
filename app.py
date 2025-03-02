@@ -51,9 +51,8 @@ geo_encoded_df= pd.DataFrame(geo_encoded,columns=geo_encoder.get_feature_names_o
 input_data= pd.concat([input_data.reset_index(drop=True),geo_encoded_df],axis=1)
 
 input_data_scaled = scaler.transform(input_data) 
-prediction=model.predict(input_data_scaled) git remote add origin https://github.com/adityaxgoswami/ANN-mini-Classification.git
+prediction=model.predict(input_data_scaled) 
 
-git push -u origin main
 
 st.write(prediction[0])
 if prediction[0]>0.5:
